@@ -1,0 +1,47 @@
+.product-details {
+    display: flex;
+    margin: 20px auto;
+    width: 700px; /* Adjust width as needed */
+  }
+  
+  .product-details img {
+    width: 50%;
+    object-fit: cover; /* Ensures image fills the space */
+  }
+  
+  .text-content {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    line-height: 1.5; /* Adjust line spacing */
+  }
+  
+  .text-content ul {
+    list-style: none; /* Remove default bullet points */
+    margin: 10px 0;
+    padding: 0;
+  }
+  
+  .text-content ul li {
+    margin-bottom: 5px;
+  }
+  
+  button {
+    background-color: #007bff; /* Adjust button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indicate hover interaction */
+  }
+  
+  button:hover {
+    background-color: #0069d9; /* Change button color on hover */
+  }
+  

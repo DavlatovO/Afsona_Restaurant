@@ -1,0 +1,34 @@
+<!-- product_detail.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ dish.name }} - Product Detail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">{{ dish.name }}</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Price: ${{ dish.price }}</p>
+                <p>Cuisine: {{ dish.cuisine }}</p>
+                <a href="{% url 'add_to_cart' dish.slug %}" class="btn btn-primary btn-sm float-right">Add to Cart</a>
+
+                
+            </div>
+        </div>
+        <a href="{% url 'menu' %}" class="btn btn-primary btn-sm float-right">Back to Home</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'script4.js' %}"></script>
+</body>
+</html>
